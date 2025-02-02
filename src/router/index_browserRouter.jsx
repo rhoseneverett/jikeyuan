@@ -1,7 +1,7 @@
 import Layout from '../pages/Layout'
 import Login from '@/pages/Login'
 import {AuthRoute} from '@/components/AuthRoute'
-import {createHashRouter} from 'react-router-dom' // Import createHashRouter instead of createBrowserRouter
+import {createBrowserRouter} from 'react-router-dom'
 // import Publish from '@/pages/Publish'
 // import Article from '@/pages/Article'
 // import Home from '@/pages/Home'
@@ -12,7 +12,7 @@ const Home = lazy(() => import('@/pages/Home'))
 const Article = lazy(() => import('@/pages/Article'))
 const Publish = lazy(() => import('@/pages/Publish'))
 
-const router = createHashRouter([ // Use createHashRouter here
+const router = createBrowserRouter([
   {
     path:'/',
     element: <AuthRoute><Layout/></AuthRoute>,
