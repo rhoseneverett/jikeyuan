@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react'
 import * as echarts from 'echarts'
 
-const BarChart = ({ title,xData, sData, style = { width: '400px', height: '300px' } }) => {
+const BarChart = ({ title,xData, sData, style = { width: '700px', height: '500px' } }) => {
   const chartRef = useRef(null)
   useEffect(() => {
     // 1. 生成实例
@@ -27,6 +27,9 @@ const BarChart = ({ title,xData, sData, style = { width: '400px', height: '300px
     }
     // 3. 渲染参数
     myChart.setOption(option)
+    return () => {
+      myChart.dispose();
+    };
   }, [sData, xData])
   return <div ref={chartRef} style={style}></div>
 }

@@ -16,12 +16,17 @@ const Login = () => {
     message.success('登录成功')
   }
 
+  const initialValues = {
+    mobile: '13800000002', // 预填的手机号
+    code: '246810' // 预填的验证码
+  };
+
   return (
     <div className="login">
       <Card className="login-container">
         <img className="login-logo" src={logo} alt="" />
         {/* 登录表单 */}
-        <Form validateTrigger="onChange" onFinish={ onFinish }>
+        <Form validateTrigger="onChange" onFinish={ onFinish } initialValues={initialValues}>
           <Form.Item 
           name="mobile"
           rules={[

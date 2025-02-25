@@ -31,7 +31,6 @@ const { setToken,setUserInfo,clearUserInfo } = userStore.actions
 // 获取reducer函数
 const userReducer = userStore.reducer
 
-// 异步方法封装
 const fetchLogin = (loginForm) => {
   return async (dispatch) => {
     const res = await loginAPI(loginForm)
