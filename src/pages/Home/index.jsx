@@ -52,7 +52,7 @@ const Home = () => {
   const xData = ["无图", "单图", "双图", "三图"];
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', marginTop:'100px' }}>
+    <div style={{ display: 'flex', justifyContent: 'center',alignItems: 'center',height: '100%'}}>
       {/* 渲染柱状图 */}
       <BarChart title={chartTitle} xData={xData} sData={typeCount} />
     </div>
